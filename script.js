@@ -1,4 +1,6 @@
 // alert("preview")
+
+                      // WORK EXPERIENCE FIELD
 function addNewWeField(){
 // console.log("mmmmmmm");
 let newNode=document.createElement('textarea');
@@ -15,7 +17,7 @@ let weAddButtonOb = document.getElementById('weAddButton');
 weOb.insertBefore(newNode,weAddButtonOb);
 }
 
-
+                       //  EDUCATION FIELD
 function addNewEduField(){
     let newNode=document.createElement('textarea');
 newNode.classList.add('form-control');
@@ -32,7 +34,7 @@ eduOb.insertBefore(newNode,eduAddButtonOb);
 }
 
 
-// projects
+                       // projects
 function addNewPjField(){
     let newNode=document.createElement('textarea');
 newNode.classList.add('form-control');
@@ -48,7 +50,7 @@ pjOb.insertBefore(newNode,pjAddButtonOb);
 }
 
 
-// skills
+                         // skills
 function addNewSkField(){
     let newNode=document.createElement('textarea');
 newNode.classList.add('form-control');
@@ -57,15 +59,13 @@ newNode.classList.add ("mt-2");
 newNode.setAttribute("placeholder" , "enter here");
 newNode.setAttribute("rows" , 1);
 
-// document.getElementById("sk").style.width = "15rem";
-
 let skOb = document.getElementById('sk');
 let skAddButtonOb = document.getElementById('skAddButton');
 
 skOb.insertBefore(newNode,skAddButtonOb);
 }
 
-// languages
+                            // languages
 function addNewlgField(){
     let newNode=document.createElement('textarea');
 newNode.classList.add('form-control');
@@ -83,7 +83,9 @@ lgOb.insertBefore(newNode,lgAddButtonOb);
 ///////////////////////////////////////
 document.getElementById("download").style.display = "none";
 
-// generating cv function
+
+
+                      // generating cv function
 function generateCV(){
     // console.log("generating....");
 
@@ -103,7 +105,10 @@ function generateCV(){
    document.getElementById("gtT").innerHTML =  document.getElementById("wbField").value;
    document.getElementById("pfT").innerHTML =  document.getElementById("pfField").value;
    document.getElementById("psT").innerHTML =  document.getElementById("psField").value;
-//  work experience
+
+
+
+                          //  work experience
   let wes = document.getElementsByClassName("weField");
   let str = '';
   for(let e of wes){
@@ -114,7 +119,7 @@ function generateCV(){
   }
   document.getElementById("weT").innerHTML = str;
 
-  //eductaion string
+                                 //eductaion string
   let edus = document.getElementsByClassName("eduField");
   let str1 = '';
   for(let e of edus){
@@ -126,7 +131,7 @@ function generateCV(){
   document.getElementById("eduT").innerHTML = str1;
   
 
-  //projects string
+                                      //projects string
   let pjs = document.getElementsByClassName("pjField");
   let str2 = '';
   for(let e of pjs){
@@ -138,7 +143,7 @@ function generateCV(){
   document.getElementById("pjT").innerHTML = str2;
 
 
-// skills
+                                             // skills
   let sks = document.getElementsByClassName("skField");
   let str3 = '';
   for(let e of sks){
@@ -147,7 +152,7 @@ function generateCV(){
   document.getElementById("skT").innerHTML = str3;
 
 
-// languages
+                                      // languages
 let lgs = document.getElementsByClassName("lgField");
 let str4 = '';
 for(let e of lgs){
@@ -161,12 +166,11 @@ let file=document.getElementById("imageField").files[0];
 reader.readAsDataURL(file);
 console.log(reader.result);
 
-//set image to template
-// document.getElementById("imageT").src= reader.result;
+                                        //set image to template
+
 reader.onloadend =function(){
     document.getElementById("imageT").src= reader.result; 
 }
-
 
 
 document.getElementById("goback").style.display = "block";
@@ -175,7 +179,7 @@ document.getElementById("download").style.display = "block";
   document.getElementById("cv-template").style.display = "grid";
 }
 
-// goback
+                                              // goback
 function formCV(){
     document.getElementById("goback").style.display = "none";
     document.getElementById("cv-form").style.display = "block";
@@ -183,7 +187,6 @@ function formCV(){
 
   document.getElementById("download").style.display = "none";
 }
-
 
 
 const areaCv = document.getElementById("cv-template");
